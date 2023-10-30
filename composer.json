@@ -1,0 +1,18 @@
+{
+    "name": "mody/orion",
+    "description": "The plugin to make your WP completely headless",
+    "autoload": {
+        "psr-4": {
+            "Mody\\Orion\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mody Solutions",
+            "email": "orion@modysolutions.com"
+        }
+    ],
+    "require": {
+        "wp-graphql/wp-graphql-acf": "^0.6.1"
+    }
+}

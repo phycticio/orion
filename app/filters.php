@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * Theme filters.
+ */
+
+namespace App;
+
+/**
+ * Add "… Continued" to the excerpt.
+ *
+ * @return string
+ */
+add_filter('excerpt_more', function () {
+    return sprintf(' &hellip; <a href="%s">%s</a>', get_permalink(), __('Continued', 'sage'));
+});
+
+foreach(glob(__DIR__ . "/filters/*.php") as $filter_file) {
+    if(is_file($filter_file))
+        require_once $filter_file;
+}
