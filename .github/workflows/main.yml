@@ -8,6 +8,19 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v3
 
+      - name: Use Node.js 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+
+      - name: 🔨 Build Project
+        run: |
+          npm install
+          npm run build
+
+      - name: Composer Install
+        run: composer install
+
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
@@ -15,3 +28,14 @@ jobs:
           username: ${{ secrets.ORION_FTP_USERNAME }}
           password: ${{ secrets.ORION_FTP_PASSWORD }}
           "server-dir": ./wp-content/plugins/orion/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.budfiles*
+            **/.budfiles/*/**
+            **/node_modules/**
+            .editorconfig
+            .gitignore
+            bud*
+            jsconfig*
+            package*
