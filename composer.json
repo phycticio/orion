@@ -1,9 +1,9 @@
 {
-    "name": "mody/orion",
+    "name": "polimorfica/orion",
     "description": "The plugin to make your WP completely headless",
     "autoload": {
         "psr-4": {
-            "Mody\\Orion\\": "src/"
+            "orion\\": "app/"
         }
     },
     "authors": [
@@ -13,6 +13,7 @@
         }
     ],
     "require": {
-        "wp-graphql/wp-graphql-acf": "^0.6.1"
+        "htmlburger/carbon-fields": "^3.0.2",
+        "twig/twig": "^3.0"
     }
 }

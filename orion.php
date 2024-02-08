@@ -23,7 +23,11 @@ define('ORION_URL', plugin_dir_url(__FILE__));
 define('ORION_PATH', plugin_dir_path(__FILE__));
 
 require_once ORION_PATH . '/vendor/autoload.php';
-foreach(glob(__DIR__ . "/app/*.php") as $action_file) {
-    if(is_file($action_file))
-        require_once $action_file;
-}
+
+\orion\actions\admin\Orion_Enqueue_Scripts::init();
+\orion\actions\admin\Orion_Options::init();
+\orion\actions\Orion_After_Setup_Theme::init();
+\orion\filters\Orion_General::init();
+\orion\actions\admin\Orion_Save_Theme_Options::init();
+\orion\actions\admin\Orion_Post_Types::init();
+\orion\actions\admin\post_types\Orion_CPT_Fields::init();

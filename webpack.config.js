@@ -1,34 +1,34 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const defaults = require('@wordpress/scripts/config/webpack.config.js');
 
 module.exports = {
-    mode: process.env.NODE_ENV,
+    ...defaults,
     entry: {
-        orion: ['./src/scripts/orion.js', './src/styles/orion.sass']
+        'orion': path.resolve( process.cwd(), 'resources', 'scripts.ts' ),
     },
     output: {
         filename: '[name].js',
-        path: path.resolve(__dirname, 'dist'),
-        clean: true,
+        path: path.resolve( process.cwd(), 'dist' ),
     },
     module: {
+        ...defaults.module,
         rules: [
+            ...defaults.module.rules,
             {
-                test: /\.s[ac]ss$/i,
+                test: /\.tsx?$/,
                 use: [
-                    // fallback to style-loader in development
-                    process.env.NODE_ENV !== 'production'
-                        ? 'style-loader'
-                        : MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    'sass-loader',
-                ],
-            },
-        ],
+                    {
+                        loader: 'ts-loader',
+                        options: {
+                            configFile: 'tsconfig.json',
+                            transpileOnly: true,
+                        }
+                    }
+                ]
+            }
+        ]
     },
-    plugins: [
-        new MiniCssExtractPlugin({
-            filename: '[name].css',
-        }),
-    ],
+    resolve: {
+        extensions: [ '.ts', '.tsx', ...(defaults.resolve ? defaults.resolve.extensions || ['.js', '.jsx'] : [])]
+    }
 };
