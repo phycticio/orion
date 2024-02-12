@@ -7,7 +7,7 @@ class Orion_After_Setup_Theme {
 		add_action('after_setup_theme', self::after_setup_theme(...));
 	}
 
-	public static function after_setup_theme(){
+	public static function after_setup_theme() : void {
 		\Carbon_Fields\Carbon_Fields::boot();
 	}
 }

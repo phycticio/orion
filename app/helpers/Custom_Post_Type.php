@@ -34,8 +34,8 @@ class Custom_Post_Type {
 
 	public static function args( $post_attributes ): array {
 		$default_attributes = array(
-			'public'             => false,
-			'publicly_queryable' => false,
+			'public'             => true,
+			'publicly_queryable' => true,
 			'show_ui'            => true,
 			'show_in_menu'       => true,
 			'query_var'          => true,

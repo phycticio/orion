@@ -18,12 +18,12 @@
  *
  */
 
-const ORION_VER = 1;
-define('ORION_URL', plugin_dir_url(__FILE__));
-define('ORION_PATH', plugin_dir_path(__FILE__));
+define( 'ORION_URL', plugin_dir_url( __FILE__ ) );
+define( 'ORION_PATH', plugin_dir_path( __FILE__ ) );
+define( 'ORION_VER', filemtime( ORION_PATH . '/dist/orion.css' ) );
 
 require_once ORION_PATH . '/vendor/autoload.php';
-
+\orion\actions\Orion_Initializer::start();
 \orion\actions\admin\Orion_Enqueue_Scripts::init();
 \orion\actions\admin\Orion_Options::init();
 \orion\actions\Orion_After_Setup_Theme::init();

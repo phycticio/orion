@@ -27,6 +27,8 @@ class Orion_Taxonomy {
 			'menu_position' => self::POST_TYPE_MENU_POSITION,
 			'supports'      => self::POST_TYPE_SUPPORT,
 			'icon'          => self::POST_TYPE_ICON,
+			'graphql_single_name' => 'custom_taxonomy',
+			'graphql_plural_name' => 'custom_taxonomies',
 		] );
 		register_post_type( self::POST_TYPE, $args );
 	}
