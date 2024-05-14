@@ -1,6 +1,7 @@
 <?php
-
 namespace orion\option_pages;
+
+// @package orion
 
 class Orion_Login_Settings {
 	public static function start(): void {
