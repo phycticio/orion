@@ -13,35 +13,35 @@ class Orion_Login_Settings {
 	public static function init(): void {
 		register_post_type( 'setting', array(
 			'labels'              => array(
-				'name'                     => __( 'Settings', 'orion' ),
-				'singular_name'            => __( 'Setting', 'orion' ),
-				'menu_name'                => __( 'Settings', 'orion' ),
-				'all_items'                => __( 'All Settings', 'orion' ),
-				'edit_item'                => __( 'Edit Setting', 'orion' ),
-				'view_item'                => __( 'View Setting', 'orion' ),
-				'view_items'               => __( 'View Settings', 'orion' ),
-				'add_new_item'             => __( 'Add New Setting', 'orion' ),
-				'add_new'                  => __( 'Add New Setting', 'orion' ),
-				'new_item'                 => __( 'New Setting', 'orion' ),
-				'parent_item_colon'        => __( 'Parent Setting:', 'orion' ),
-				'search_items'             => __( 'Search Settings', 'orion' ),
-				'not_found'                => __( 'No settings found', 'orion' ),
-				'not_found_in_trash'       => __( 'No settings found in Trash', 'orion' ),
-				'archives'                 => __( 'Setting Archives', 'orion' ),
-				'attributes'               => __( 'Setting Attributes', 'orion' ),
-				'insert_into_item'         => __( 'Insert into setting', 'orion' ),
-				'uploaded_to_this_item'    => __( 'Uploaded to this setting', 'orion' ),
-				'filter_items_list'        => __( 'Filter settings list', 'orion' ),
-				'filter_by_date'           => __( 'Filter settings by date', 'orion' ),
-				'items_list_navigation'    => __( 'Settings list navigation', 'orion' ),
-				'items_list'               => __( 'Settings list', 'orion' ),
-				'item_published'           => __( 'Setting published.', 'orion' ),
-				'item_published_privately' => __( 'Setting published privately.', 'orion' ),
-				'item_reverted_to_draft'   => __( 'Setting reverted to draft.', 'orion' ),
-				'item_scheduled'           => __( 'Setting scheduled.', 'orion' ),
-				'item_updated'             => __( 'Setting updated.', 'orion' ),
-				'item_link'                => __( 'Setting Link', 'orion' ),
-				'item_link_description'    => __( 'A link to a setting.', 'orion' ),
+				'name'                     => esc_html__( 'Settings', 'orion' ),
+				'singular_name'            => esc_html__( 'Setting', 'orion' ),
+				'menu_name'                => esc_html__( 'Settings', 'orion' ),
+				'all_items'                => esc_html__( 'All Settings', 'orion' ),
+				'edit_item'                => esc_html__( 'Edit Setting', 'orion' ),
+				'view_item'                => esc_html__( 'View Setting', 'orion' ),
+				'view_items'               => esc_html__( 'View Settings', 'orion' ),
+				'add_new_item'             => esc_html__( 'Add New Setting', 'orion' ),
+				'add_new'                  => esc_html__( 'Add New Setting', 'orion' ),
+				'new_item'                 => esc_html__( 'New Setting', 'orion' ),
+				'parent_item_colon'        => esc_html__( 'Parent Setting:', 'orion' ),
+				'search_items'             => esc_html__( 'Search Settings', 'orion' ),
+				'not_found'                => esc_html__( 'No settings found', 'orion' ),
+				'not_found_in_trash'       => esc_html__( 'No settings found in Trash', 'orion' ),
+				'archives'                 => esc_html__( 'Setting Archives', 'orion' ),
+				'attributes'               => esc_html__( 'Setting Attributes', 'orion' ),
+				'insert_into_item'         => esc_html__( 'Insert into setting', 'orion' ),
+				'uploaded_to_this_item'    => esc_html__( 'Uploaded to this setting', 'orion' ),
+				'filter_items_list'        => esc_html__( 'Filter settings list', 'orion' ),
+				'filter_by_date'           => esc_html__( 'Filter settings by date', 'orion' ),
+				'items_list_navigation'    => esc_html__( 'Settings list navigation', 'orion' ),
+				'items_list'               => esc_html__( 'Settings list', 'orion' ),
+				'item_published'           => esc_html__( 'Setting published.', 'orion' ),
+				'item_published_privately' => esc_html__( 'Setting published privately.', 'orion' ),
+				'item_reverted_to_draft'   => esc_html__( 'Setting reverted to draft.', 'orion' ),
+				'item_scheduled'           => esc_html__( 'Setting scheduled.', 'orion' ),
+				'item_updated'             => esc_html__( 'Setting updated.', 'orion' ),
+				'item_link'                => esc_html__( 'Setting Link', 'orion' ),
+				'item_link_description'    => esc_html__( 'A link to a setting.', 'orion' ),
 			),
 			'public'              => false,
 			'exclude_from_search' => false,
@@ -61,11 +61,12 @@ class Orion_Login_Settings {
 	public static function acf_init(): void {
 		acf_add_options_page( array(
 			'page_title'  => 'Login settings',
-			'menu_slug'   => 'login-settings',
+			'menu_slug'   => 'orion-login-settings',
 			'parent_slug' => 'orion',
-			'menu_title'  => __( 'Login settings', 'orion' ),
+			'menu_title'  => esc_html__( 'Login settings', 'orion' ),
 			'position'    => 1,
 			'redirect'    => false,
+			'capability' => 'manage_options',
 		) );
 	}
 
@@ -76,7 +77,7 @@ class Orion_Login_Settings {
 			'fields'                => array(
 				array(
 					'key'               => 'field_663b350568f02',
-					'label'             => __( 'Customize login page', 'orion' ),
+					'label'             => esc_html__( 'Customize login page', 'orion' ),
 					'name'              => 'customize_login_page',
 					'aria-label'        => '',
 					'type'              => 'true_false',
@@ -96,7 +97,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663b82445334b',
-					'label'             => __( 'Custom Login URL', 'orion' ),
+					'label'             => esc_html__( 'Custom Login URL', 'orion' ),
 					'name'              => 'custom_login_url',
 					'aria-label'        => '',
 					'type'              => 'true_false',
@@ -116,7 +117,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663b719832286',
-					'label'             => __( 'Customize labels', 'orion' ),
+					'label'             => esc_html__( 'Customize labels', 'orion' ),
 					'name'              => 'customize_labels',
 					'aria-label'        => '',
 					'type'              => 'true_false',
@@ -136,7 +137,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663a36573882b',
-					'label'             => __( 'Authenticated Users Only', 'orion' ),
+					'label'             => esc_html__( 'Authenticated Users Only', 'orion' ),
 					'name'              => 'authenticated_users_only',
 					'aria-label'        => '',
 					'type'              => 'true_false',
@@ -160,7 +161,7 @@ class Orion_Login_Settings {
 					array(
 						'param'    => 'options_page',
 						'operator' => '==',
-						'value'    => 'login-settings',
+						'value'    => 'orion-login-settings',
 					),
 				),
 			),
@@ -181,7 +182,7 @@ class Orion_Login_Settings {
 			'fields'                => array(
 				array(
 					'key'               => 'field_663d386bf297b',
-					'label'             => __( 'Layout', 'orion' ),
+					'label'             => esc_html__( 'Layout', 'orion' ),
 					'name'              => 'login_layout',
 					'aria-label'        => '',
 					'type'              => 'select',
@@ -208,7 +209,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663cd77797e9a',
-					'label'             => __( 'Font family', 'orion' ),
+					'label'             => esc_html__( 'Font family', 'orion' ),
 					'name'              => 'font-family',
 					'aria-label'        => '',
 					'type'              => 'select',
@@ -235,7 +236,7 @@ class Orion_Login_Settings {
 					array(
 						'param'    => 'options_page',
 						'operator' => '==',
-						'value'    => 'login-settings',
+						'value'    => 'orion-login-settings',
 					),
 				),
 			),
@@ -256,7 +257,7 @@ class Orion_Login_Settings {
 			'fields'                => array(
 				array(
 					'key'               => 'field_66423032fe379',
-					'label'             => __( 'Background', 'orion' ),
+					'label'             => esc_html__( 'Background', 'orion' ),
 					'name'              => 'form_background_color',
 					'aria-label'        => '',
 					'type'              => 'color_picker',
@@ -274,7 +275,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_66422decfe374',
-					'label'             => __( 'Border Color', 'orion' ),
+					'label'             => esc_html__( 'Border Color', 'orion' ),
 					'name'              => 'border_color',
 					'aria-label'        => '',
 					'type'              => 'color_picker',
@@ -292,7 +293,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_66423e1f1087c',
-					'label'             => __( 'Field Border Color', 'orion' ),
+					'label'             => esc_html__( 'Field Border Color', 'orion' ),
 					'name'              => 'form_field_border_color',
 					'aria-label'        => '',
 					'type'              => 'color_picker',
@@ -310,7 +311,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663b309b48deb',
-					'label'             => __( 'Submit button background color', 'orion' ),
+					'label'             => esc_html__( 'Submit button background color', 'orion' ),
 					'name'              => 'submit_button_bg_color',
 					'aria-label'        => '',
 					'type'              => 'color_picker',
@@ -328,7 +329,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663a96296394d',
-					'label'             => __( 'Submit button text color', 'orion' ),
+					'label'             => esc_html__( 'Submit button text color', 'orion' ),
 					'name'              => 'submit_button_text_color',
 					'aria-label'        => '',
 					'type'              => 'color_picker',
@@ -346,7 +347,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_66424f89e8b7f',
-					'label'             => __( 'Default button background color', 'orion' ),
+					'label'             => esc_html__( 'Default button background color', 'orion' ),
 					'name'              => 'default_button_background_color',
 					'aria-label'        => '',
 					'type'              => 'color_picker',
@@ -364,7 +365,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_66424fa0e8b80',
-					'label'             => __( 'Default button text color', 'orion' ),
+					'label'             => esc_html__( 'Default button text color', 'orion' ),
 					'name'              => 'default_button_text_color',
 					'aria-label'        => '',
 					'type'              => 'color_picker',
@@ -382,7 +383,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663b306748de8',
-					'label'             => __( 'Background color', 'orion' ),
+					'label'             => esc_html__( 'Background color', 'orion' ),
 					'name'              => 'background_color',
 					'aria-label'        => '',
 					'type'              => 'color_picker',
@@ -400,7 +401,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663a95b868ba1',
-					'label'             => __( 'Text Color', 'orion' ),
+					'label'             => esc_html__( 'Text Color', 'orion' ),
 					'name'              => 'text_color',
 					'aria-label'        => '',
 					'type'              => 'color_picker',
@@ -418,7 +419,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663a95cc68ba2',
-					'label'             => __( 'Link Color', 'orion' ),
+					'label'             => esc_html__( 'Link Color', 'orion' ),
 					'name'              => 'link_color',
 					'aria-label'        => '',
 					'type'              => 'color_picker',
@@ -436,7 +437,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663d3dd7b89b0',
-					'label'             => __( 'BG Color', 'orion' ),
+					'label'             => esc_html__( 'BG Color', 'orion' ),
 					'name'              => 'container_background_color',
 					'aria-label'        => '',
 					'type'              => 'color_picker',
@@ -458,7 +459,7 @@ class Orion_Login_Settings {
 					array(
 						'param'    => 'options_page',
 						'operator' => '==',
-						'value'    => 'login-settings',
+						'value'    => 'orion-login-settings',
 					),
 				),
 			),
@@ -479,7 +480,7 @@ class Orion_Login_Settings {
 			'fields'                => array(
 				array(
 					'key'               => 'field_6642499bec3a4',
-					'label'             => __( 'Form width', 'orion' ),
+					'label'             => esc_html__( 'Form width', 'orion' ),
 					'name'              => 'form_width',
 					'aria-label'        => '',
 					'type'              => 'number',
@@ -501,7 +502,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_664249b8ec3a5',
-					'label'             => __( 'Unit', 'orion' ),
+					'label'             => esc_html__( 'Unit', 'orion' ),
 					'name'              => 'form_width_unit',
 					'aria-label'        => '',
 					'type'              => 'select',
@@ -529,7 +530,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_66422e1cfe375',
-					'label'             => __( 'Border width', 'orion' ),
+					'label'             => esc_html__( 'Border width', 'orion' ),
 					'name'              => 'border_width',
 					'aria-label'        => '',
 					'type'              => 'number',
@@ -551,7 +552,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_66422e2efe376',
-					'label'             => __( 'Unit', 'orion' ),
+					'label'             => esc_html__( 'Unit', 'orion' ),
 					'name'              => 'border_width_unit',
 					'aria-label'        => '',
 					'type'              => 'select',
@@ -579,7 +580,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_664234d2dff8b',
-					'label'             => __( 'Form padding', 'orion' ),
+					'label'             => esc_html__( 'Form padding', 'orion' ),
 					'name'              => 'form_padding',
 					'aria-label'        => '',
 					'type'              => 'number',
@@ -601,7 +602,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_664234f0dff8c',
-					'label'             => __( 'Unit', 'orion' ),
+					'label'             => esc_html__( 'Unit', 'orion' ),
 					'name'              => 'form_padding_unit',
 					'aria-label'        => '',
 					'type'              => 'select',
@@ -629,7 +630,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663c98a3a4a39',
-					'label'             => __( 'Container width', 'orion' ),
+					'label'             => esc_html__( 'Container width', 'orion' ),
 					'name'              => 'container_width',
 					'aria-label'        => '',
 					'type'              => 'number',
@@ -651,7 +652,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663c9911a4a3a',
-					'label'             => __( 'Unit', 'orion' ),
+					'label'             => esc_html__( 'Unit', 'orion' ),
 					'name'              => 'container_width_unit',
 					'aria-label'        => '',
 					'type'              => 'select',
@@ -684,7 +685,7 @@ class Orion_Login_Settings {
 					array(
 						'param'    => 'options_page',
 						'operator' => '==',
-						'value'    => 'login-settings',
+						'value'    => 'orion-login-settings',
 					),
 				),
 			),
@@ -705,7 +706,7 @@ class Orion_Login_Settings {
 			'fields'                => array(
 				array(
 					'key'               => 'field_663a3ba8a4ca8',
-					'label'             => __( 'Use Custom Logo', 'orion' ),
+					'label'             => esc_html__( 'Use Custom Logo', 'orion' ),
 					'name'              => 'use_custom_logo',
 					'aria-label'        => '',
 					'type'              => 'true_false',
@@ -725,7 +726,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663a3c86c7fd8',
-					'label'             => __( 'Logo from Theme Settings', 'orion' ),
+					'label'             => esc_html__( 'Logo from Theme Settings', 'orion' ),
 					'name'              => 'logo_from_theme_settings',
 					'aria-label'        => '',
 					'type'              => 'true_false',
@@ -745,7 +746,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663a3c4ec7fd7',
-					'label'             => __( '', 'orion' ),
+					'label'             => esc_html__( '', 'orion' ),
 					'name'              => '',
 					'aria-label'        => '',
 					'type'              => 'message',
@@ -776,7 +777,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663a3bfba4ca9',
-					'label'             => __( 'Custom Logo', 'orion' ),
+					'label'             => esc_html__( 'Custom Logo', 'orion' ),
 					'name'              => 'custom_logo',
 					'aria-label'        => '',
 					'type'              => 'image',
@@ -814,7 +815,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663b324dae82b',
-					'label'             => __( 'Logo width', 'orion' ),
+					'label'             => esc_html__( 'Logo width', 'orion' ),
 					'name'              => 'logo_width',
 					'aria-label'        => '',
 					'type'              => 'number',
@@ -836,7 +837,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663b3292ae82c',
-					'label'             => __( 'Logo width unit', 'orion' ),
+					'label'             => esc_html__( 'Logo width unit', 'orion' ),
 					'name'              => 'logo_width_unit',
 					'aria-label'        => '',
 					'type'              => 'select',
@@ -865,7 +866,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663d353b9cab8',
-					'label'             => __( 'Logo height', 'orion' ),
+					'label'             => esc_html__( 'Logo height', 'orion' ),
 					'name'              => 'logo_height',
 					'aria-label'        => '',
 					'type'              => 'text',
@@ -885,7 +886,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663b32ccae82e',
-					'label'             => __( 'Logo height unit', 'orion' ),
+					'label'             => esc_html__( 'Logo height unit', 'orion' ),
 					'name'              => 'logo_height_unit',
 					'aria-label'        => '',
 					'type'              => 'select',
@@ -918,7 +919,7 @@ class Orion_Login_Settings {
 					array(
 						'param'    => 'options_page',
 						'operator' => '==',
-						'value'    => 'login-settings',
+						'value'    => 'orion-login-settings',
 					),
 				),
 			),
@@ -939,7 +940,7 @@ class Orion_Login_Settings {
 			'fields'                => array(
 				array(
 					'key'               => 'field_663b3995b7651',
-					'label'             => __( 'Body Background image', 'orion' ),
+					'label'             => esc_html__( 'Body Background image', 'orion' ),
 					'name'              => 'body_background_image',
 					'aria-label'        => '',
 					'type'              => 'image',
@@ -968,7 +969,7 @@ class Orion_Login_Settings {
 					array(
 						'param'    => 'options_page',
 						'operator' => '==',
-						'value'    => 'login-settings',
+						'value'    => 'orion-login-settings',
 					),
 				),
 			),
@@ -989,7 +990,7 @@ class Orion_Login_Settings {
 			'fields'                => array(
 				array(
 					'key'               => 'field_66423b8dc8b1e',
-					'label'             => __( 'Border radius', 'orion' ),
+					'label'             => esc_html__( 'Border radius', 'orion' ),
 					'name'              => 'form_border_radius',
 					'aria-label'        => '',
 					'type'              => 'number',
@@ -1011,7 +1012,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_66423b40c8b1d',
-					'label'             => __( 'Unit', 'orion' ),
+					'label'             => esc_html__( 'Unit', 'orion' ),
 					'name'              => 'form_border_radius_unit',
 					'aria-label'        => '',
 					'type'              => 'select',
@@ -1039,7 +1040,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_66423efee79d4',
-					'label'             => __( 'Field border', 'orion' ),
+					'label'             => esc_html__( 'Field border', 'orion' ),
 					'name'              => 'form_field_border',
 					'aria-label'        => '',
 					'type'              => 'number',
@@ -1061,7 +1062,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_66423f0ce79d5',
-					'label'             => __( 'Unit', 'orion' ),
+					'label'             => esc_html__( 'Unit', 'orion' ),
 					'name'              => 'form_field_border_unit',
 					'aria-label'        => '',
 					'type'              => 'select',
@@ -1089,7 +1090,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_66423cf6354a7',
-					'label'             => __( 'Field radius', 'orion' ),
+					'label'             => esc_html__( 'Field radius', 'orion' ),
 					'name'              => 'form_field_border_radius',
 					'aria-label'        => '',
 					'type'              => 'number',
@@ -1111,7 +1112,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_66423d11354a8',
-					'label'             => __( 'Unit', 'orion' ),
+					'label'             => esc_html__( 'Unit', 'orion' ),
 					'name'              => 'form_field_border_radius_unit',
 					'aria-label'        => '',
 					'type'              => 'select',
@@ -1143,7 +1144,7 @@ class Orion_Login_Settings {
 					array(
 						'param'    => 'options_page',
 						'operator' => '==',
-						'value'    => 'login-settings',
+						'value'    => 'orion-login-settings',
 					),
 				),
 			),
@@ -1164,7 +1165,7 @@ class Orion_Login_Settings {
 			'fields'                => array(
 				array(
 					'key'               => 'field_663b727d32288',
-					'label'             => __( 'Username', 'orion' ),
+					'label'             => esc_html__( 'Username', 'orion' ),
 					'name'              => 'label_username',
 					'aria-label'        => '',
 					'type'              => 'text',
@@ -1184,7 +1185,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663b729d32289',
-					'label'             => __( 'Password', 'orion' ),
+					'label'             => esc_html__( 'Password', 'orion' ),
 					'name'              => 'label_password',
 					'aria-label'        => '',
 					'type'              => 'text',
@@ -1204,7 +1205,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663b72b13228a',
-					'label'             => __( 'Remember Me', 'orion' ),
+					'label'             => esc_html__( 'Remember Me', 'orion' ),
 					'name'              => 'label_remember',
 					'aria-label'        => '',
 					'type'              => 'text',
@@ -1224,7 +1225,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663cc60a79ac9',
-					'label'             => __( 'Login link', 'orion' ),
+					'label'             => esc_html__( 'Login link', 'orion' ),
 					'name'              => 'label_login_link',
 					'aria-label'        => '',
 					'type'              => 'text',
@@ -1244,7 +1245,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663b72db3228b',
-					'label'             => __( 'Register link', 'orion' ),
+					'label'             => esc_html__( 'Register link', 'orion' ),
 					'name'              => 'label_register_link',
 					'aria-label'        => '',
 					'type'              => 'text',
@@ -1264,7 +1265,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663cc5ee79ac8',
-					'label'             => __( 'Forgot password link', 'orion' ),
+					'label'             => esc_html__( 'Forgot password link', 'orion' ),
 					'name'              => 'label_forgot_password_link',
 					'aria-label'        => '',
 					'type'              => 'text',
@@ -1284,7 +1285,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663d41820f13f',
-					'label'             => __( 'Show back to blog', 'orion' ),
+					'label'             => esc_html__( 'Show back to blog', 'orion' ),
 					'name'              => 'show_back_to_blog',
 					'aria-label'        => '',
 					'type'              => 'true_false',
@@ -1304,7 +1305,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663cc62279aca',
-					'label'             => __( 'Back to blog', 'orion' ),
+					'label'             => esc_html__( 'Back to blog', 'orion' ),
 					'name'              => 'label_back_to_block',
 					'aria-label'        => '',
 					'type'              => 'text',
@@ -1324,7 +1325,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663d053688322',
-					'label'             => __( 'Registration message', 'orion' ),
+					'label'             => esc_html__( 'Registration message', 'orion' ),
 					'name'              => 'registration_message',
 					'aria-label'        => '',
 					'type'              => 'text',
@@ -1344,7 +1345,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663d05a7c0bd8',
-					'label'             => __( 'Login header message', 'orion' ),
+					'label'             => esc_html__( 'Login header message', 'orion' ),
 					'name'              => 'login_header_message',
 					'aria-label'        => '',
 					'type'              => 'text',
@@ -1368,7 +1369,7 @@ class Orion_Login_Settings {
 					array(
 						'param'    => 'options_page',
 						'operator' => '==',
-						'value'    => 'login-settings',
+						'value'    => 'orion-login-settings',
 					),
 				),
 			),
@@ -1389,7 +1390,7 @@ class Orion_Login_Settings {
 			'fields'                => array(
 				array(
 					'key'               => 'field_663b8c57e3a75',
-					'label'             => __( 'Login page', 'orion' ),
+					'label'             => esc_html__( 'Login page', 'orion' ),
 					'name'              => 'login_url',
 					'aria-label'        => '',
 					'type'              => 'text',
@@ -1409,7 +1410,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663b973cfb46e',
-					'label'             => __( 'Register page', 'orion' ),
+					'label'             => esc_html__( 'Register page', 'orion' ),
 					'name'              => 'register_url',
 					'aria-label'        => '',
 					'type'              => 'text',
@@ -1429,7 +1430,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663b9751fb470',
-					'label'             => __( 'Lost password page', 'orion' ),
+					'label'             => esc_html__( 'Lost password page', 'orion' ),
 					'name'              => 'lost_password_url',
 					'aria-label'        => '',
 					'type'              => 'text',
@@ -1449,7 +1450,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663b975bfb471',
-					'label'             => __( 'Reset password page', 'orion' ),
+					'label'             => esc_html__( 'Reset password page', 'orion' ),
 					'name'              => 'reset_password_url',
 					'aria-label'        => '',
 					'type'              => 'text',
@@ -1473,7 +1474,7 @@ class Orion_Login_Settings {
 					array(
 						'param'    => 'options_page',
 						'operator' => '==',
-						'value'    => 'login-settings',
+						'value'    => 'orion-login-settings',
 					),
 				),
 			),
@@ -1494,7 +1495,7 @@ class Orion_Login_Settings {
 			'fields'                => array(
 				array(
 					'key'               => 'field_663d0a028c626',
-					'label'             => __( 'Position', 'orion' ),
+					'label'             => esc_html__( 'Position', 'orion' ),
 					'name'              => 'message_position',
 					'aria-label'        => '',
 					'type'              => 'select',
@@ -1525,7 +1526,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663d2c8bf2959',
-					'label'             => __( 'Use generic error message', 'orion' ),
+					'label'             => esc_html__( 'Use generic error message', 'orion' ),
 					'name'              => 'use_generic_error_message',
 					'aria-label'        => '',
 					'type'              => 'true_false',
@@ -1545,7 +1546,7 @@ class Orion_Login_Settings {
 				),
 				array(
 					'key'               => 'field_663d2cc5f295a',
-					'label'             => __( 'Generic error message', 'orion' ),
+					'label'             => esc_html__( 'Generic error message', 'orion' ),
 					'name'              => 'generic_error_message',
 					'aria-label'        => '',
 					'type'              => 'text',
@@ -1569,7 +1570,7 @@ class Orion_Login_Settings {
 					array(
 						'param'    => 'options_page',
 						'operator' => '==',
-						'value'    => 'login-settings',
+						'value'    => 'orion-login-settings',
 					),
 				),
 			),

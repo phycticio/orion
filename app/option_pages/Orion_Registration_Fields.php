@@ -11,7 +11,7 @@ class Orion_Registration_Fields {
 	public static function acf_init() {
 		acf_add_options_page( array(
 			'page_title'  => esc_html__( 'Registration fields', 'orion' ),
-			'menu_slug'   => 'registration-fields',
+			'menu_slug'   => 'orion-registration-fields',
 			'parent_slug' => 'orion',
 			'menu_title'  => esc_html__( 'Registration fields', 'orion' ),
 			'position'    => 2,
@@ -297,7 +297,7 @@ class Orion_Registration_Fields {
 					array(
 						'param'    => 'options_page',
 						'operator' => '==',
-						'value'    => 'registration-fields',
+						'value'    => 'orion-registration-fields',
 					),
 				),
 			),

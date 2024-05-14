@@ -13,7 +13,7 @@ class Orion_Settings_Main_Page {
 			'page_title' => 'Orion',
 			'menu_slug'  => 'orion',
 			'icon_url'   => 'dashicons-superhero',
-			'menu_title' => __( 'Orion', 'orion' ),
+			'menu_title' => esc_html__( 'Orion', 'orion' ),
 			'position'   => 100,
 			'redirect'   => false,
 		) );
@@ -22,11 +22,11 @@ class Orion_Settings_Main_Page {
 	public static function acf_include_fields(): void {
 		acf_add_local_field_group( array(
 			'key'                   => 'group_663d30d230558',
-			'title'                 => 'Notices colors',
+			'title'                 => esc_html__( 'Notices colors', 'orion' ),
 			'fields'                => array(
 				array(
 					'key'               => 'field_663d30d2ca241',
-					'label'             => __( 'Success', 'orion' ),
+					'label'             => esc_html__( 'Success', 'orion' ),
 					'name'              => 'notice_success',
 					'aria-label'        => '',
 					'type'              => 'color_picker',
@@ -44,7 +44,7 @@ class Orion_Settings_Main_Page {
 				),
 				array(
 					'key'               => 'field_663d3217ca242',
-					'label'             => __( 'Error', 'orion' ),
+					'label'             => esc_html__( 'Error', 'orion' ),
 					'name'              => 'notice_error',
 					'aria-label'        => '',
 					'type'              => 'color_picker',
@@ -62,7 +62,7 @@ class Orion_Settings_Main_Page {
 				),
 				array(
 					'key'               => 'field_663d323cca243',
-					'label'             => __( 'Warning', 'orion' ),
+					'label'             => esc_html__( 'Warning', 'orion' ),
 					'name'              => 'notice_warning',
 					'aria-label'        => '',
 					'type'              => 'color_picker',
@@ -80,7 +80,7 @@ class Orion_Settings_Main_Page {
 				),
 				array(
 					'key'               => 'field_663d328eca245',
-					'label'             => __( 'Info', 'orion' ),
+					'label'             => esc_html__( 'Info', 'orion' ),
 					'name'              => 'notice_info',
 					'aria-label'        => '',
 					'type'              => 'color_picker',

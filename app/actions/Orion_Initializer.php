@@ -12,6 +12,7 @@ use orion\filters\Orion_General;
 use orion\filters\Orion_Login as Orion_Login_Filter;
 use orion\filters\Orion_Lost_Password;
 use orion\filters\Orion_Register;
+use orion\option_pages\Orion_Email_Marketing_Settings;
 use orion\option_pages\Orion_Login_Settings;
 use orion\option_pages\Orion_Registration_Fields;
 use orion\option_pages\Orion_Settings_Main_Page;
@@ -37,6 +38,7 @@ class Orion_Initializer {
 	        Orion_Settings_Main_Page::start();
 	        Orion_Login_Settings::start();
 			Orion_Registration_Fields::start();
+	        Orion_Email_Marketing_Settings::start();
         }
         Orion_Enqueue_Scripts::start();
         Orion_ACF::start();
