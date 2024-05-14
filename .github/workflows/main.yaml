@@ -35,7 +35,7 @@ jobs:
             **/.git*
             **/.git*/**
             **/node_modules/**
-            /acf
+            **/acf/**
             .gitignore
             tsconfig*
             sitemap*
