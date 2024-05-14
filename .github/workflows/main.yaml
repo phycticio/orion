@@ -41,6 +41,5 @@ jobs:
             sitemap*
             package*
             yarn*
-            composer*
             webpack*
             .nvmrc
