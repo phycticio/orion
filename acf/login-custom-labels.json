@@ -1,0 +1,225 @@
+{
+    "key": "group_6642639e6808f",
+    "title": "Login Custom Labels",
+    "fields": [
+        {
+            "key": "field_663b727d32288",
+            "label": "Username",
+            "name": "label_username",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Username",
+            "maxlength": "",
+            "placeholder": "Username",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_663b729d32289",
+            "label": "Password",
+            "name": "label_password",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Password",
+            "maxlength": "",
+            "placeholder": "Password",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_663b72b13228a",
+            "label": "Remember Me",
+            "name": "label_remember",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Remember Me",
+            "maxlength": "",
+            "placeholder": "Remember Me",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_663cc60a79ac9",
+            "label": "Login link",
+            "name": "label_login_link",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Login",
+            "maxlength": "",
+            "placeholder": "Log In",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_663b72db3228b",
+            "label": "Register link",
+            "name": "label_register_link",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Register",
+            "maxlength": "",
+            "placeholder": "Log In",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_663cc5ee79ac8",
+            "label": "Forgot password link",
+            "name": "label_forgot_password_link",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Lost your password?",
+            "maxlength": "",
+            "placeholder": "Forgot your password?",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_663d41820f13f",
+            "label": "Show back to blog",
+            "name": "show_back_to_blog",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_663cc62279aca",
+            "label": "Back to blog",
+            "name": "label_back_to_block",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Back to %s%",
+            "maxlength": "",
+            "placeholder": "Back to %s",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_663d053688322",
+            "label": "Registration message",
+            "name": "registration_message",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Register For This Site",
+            "maxlength": "",
+            "placeholder": "Register For This Site",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_663d05a7c0bd8",
+            "label": "Login header message",
+            "name": "login_header_message",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Log In",
+            "maxlength": "",
+            "placeholder": "Log In",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "login-settings"
+            }
+        ]
+    ],
+    "menu_order": 6,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1715717922
+}

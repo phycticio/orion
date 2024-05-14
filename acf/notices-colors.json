@@ -1,0 +1,97 @@
+{
+    "key": "group_663d30d230558",
+    "title": "Notices colors",
+    "fields": [
+        {
+            "key": "field_663d30d2ca241",
+            "label": "Success",
+            "name": "notice_success",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#00a32a",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_663d3217ca242",
+            "label": "Error",
+            "name": "notice_error",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#d63638",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_663d323cca243",
+            "label": "Warning",
+            "name": "notice_warning",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#dba617",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_663d328eca245",
+            "label": "Info",
+            "name": "notice_info",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#72aee6",
+            "enable_opacity": 0,
+            "return_format": "string"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "orion"
+            }
+        ]
+    ],
+    "menu_order": 9,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1715717922
+}

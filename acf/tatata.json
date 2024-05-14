@@ -1,0 +1,23 @@
+{
+    "key": "ui_options_page_660ffac302dbf",
+    "title": "Tatata",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Tatata",
+    "menu_slug": "tatatata",
+    "parent_slug": "login-page",
+    "advanced_configuration": 1,
+    "icon_url": "",
+    "menu_title": "Orion",
+    "position": 80,
+    "redirect": false,
+    "description": "",
+    "update_button": "Save Settings",
+    "updated_message": "Settings Saved",
+    "capability": "manage_options",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "_parent": 851,
+    "modified": 1715627654
+}

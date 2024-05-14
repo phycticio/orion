@@ -1,0 +1,9 @@
+<select {{ attrs | raw }}>
+    {% for option in options %}
+        <option
+                {% if selected == option.option %}selected{% endif %}
+                value="{{ option.option }}">
+            {{ option.option }}
+        </option>
+    {% endfor %}
+</select>

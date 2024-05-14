@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');
+}
+
+body.login {
+	--orion-wp-login--background_color: rgb(236,236,236);
+	--orion-wp-login--text_color: rgba(0,0,0,0.8);
+	--orion-wp-login--link_color: rgba(0,0,0,0.8);
+	--orion-wp-login--submit_button_bg_color: #000000;
+	--orion-wp-login--submit_button_text_color: rgb(255,255,255);
+	--orion-wp-login--container_background_color: #ececec;
+	--orion-wp-login--default_button_background_color: rgb(155,155,155);
+	--orion-wp-login--default_button_text_color: rgb(255,255,255);
+	--orion-wp-login--custom_logo: url("http://localhost:10028/wp-content/uploads/2024/05/Logo-Mody-Full.png");
+	--orion-wp-login--background_image: url("http://localhost:10028/wp-content/uploads/2024/05/group-diverse-people-having-business-meeting-scaled.jpg");
+	--orion-wp-login--custom_logo_width: 200px;
+	--orion-wp-login--custom_logo_height: 7rem;
+	--orion-wp-login--login_container_width: 50%;
+	--orion-wp-login--login_container_height: rem;
+	--orion-wp-login--custom_font_family: "Montserrat", sans-serif;
+	--orion-wp-login--message_position: static;
+	--orion-wp-login--notice_success: #81d742;
+	--orion-wp-login--notice_error: #dd3333;
+	--orion-wp-login--notice_warning: #dd9933;
+	--orion-wp-login--notice_info: #7c9dbf;
+	--orion-wp-login--border_color: #efefef;
+	--orion-wp-login--border_width: 1px;
+	--orion-wp-login--form_background_color: #ffffff;
+	--orion-wp-login--form_field_border_color: #e5e5e5;
+	--orion-wp-login--form_padding: 2rem;
+	--orion-wp-login--form_border_radius: 0.3125rem;
+	--orion-wp-login--form_field_border: 1px;
+	--orion-wp-login--form_field_border_radius: 0px;
+	--orion-wp-login--form_width: 450px;
+	--orion-wp-login--align_items: stretch;
+	--orion-wp-login--justify_content: flex-end;
+	--orion-wp-login--flex_direction: row;
+	--orion-wp-login--login_container_padding: 1rem;
+	--orion-wp-login--login_container_margin: 0;
+	--orion-wp-login--login_container_display: flex;
+	--orion-wp-login--login_container_align_items: center;
+	--orion-wp-login--login_container_direction: column;
+	--orion-wp-login--login_container_justify_content: center;
+}

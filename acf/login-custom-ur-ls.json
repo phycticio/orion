@@ -1,0 +1,105 @@
+{
+    "key": "group_664263f63fb35",
+    "title": "Login Custom URLs",
+    "fields": [
+        {
+            "key": "field_663b8c57e3a75",
+            "label": "Login page",
+            "name": "login_url",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Add the custom link you without trailing or starting slashes",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "login",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "\/",
+            "append": ""
+        },
+        {
+            "key": "field_663b973cfb46e",
+            "label": "Register page",
+            "name": "register_url",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Add the custom link you without trailing or starting slashes",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "register",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "\/",
+            "append": ""
+        },
+        {
+            "key": "field_663b9751fb470",
+            "label": "Lost password page",
+            "name": "lost_password_url",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Add the custom link you without trailing or starting slashes",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "lost-password",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "\/",
+            "append": ""
+        },
+        {
+            "key": "field_663b975bfb471",
+            "label": "Reset password page",
+            "name": "reset_password_url",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Add the custom link you without trailing or starting slashes",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "reset-password",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "\/",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "login-settings"
+            }
+        ]
+    ],
+    "menu_order": 7,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1715717922
+}

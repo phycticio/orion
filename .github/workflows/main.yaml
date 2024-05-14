@@ -1,0 +1,48 @@
+on:
+  push:
+    branches:
+      - master
+name: 🚀 Deploy website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy to Mody Solutions
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      - name: 🔨 Build Project
+        run: |
+          npm install
+          npm run build
+
+      - name: Composer Install
+        run: composer install
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.MODY_ORION_FTP_SERVER }}
+          username: ${{ secrets.MODY_ORION_FTP_USER }}
+          password: ${{ secrets.MODY_ORION_FTP_PASS }}
+          "server-dir": ./orion/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            /acf
+            /resources/scripts
+            /resource/styles
+            .gitignore
+            tsconfig*
+            sitemap*
+            package*
+            yarn*
+            composer*
+            webpack*
+            .nvmrc

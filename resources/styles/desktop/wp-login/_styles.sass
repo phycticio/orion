@@ -1,0 +1,142 @@
+body.login
+  display: flex
+  align-items: var(--orion-wp-login--align_items)
+  justify-content: var(--orion-wp-login--justify_content)
+  flex-direction: var(--orion-wp-login--flex_direction)
+  font-family: var(--orion-wp-login--custom_font_family)
+  background-color: var(--orion-wp-login--background_color)
+  background-image: var(--orion-wp-login--background_image)
+  background-size: cover
+  background-repeat: no-repeat
+
+  #login
+    display: var(--orion-wp-login--login_container_display)
+    align-items: var(--orion-wp-login--login_container_align_items)
+    flex-direction: var(--orion-wp-login--login_container_direction)
+    justify-content: var(--orion-wp-login--login_container_justify_content)
+    width: var(--orion-wp-login--login_container_width)
+    padding: var(--orion-wp-login--login_container_padding)
+    margin: var(--orion-wp-login--login_container_margin)
+    background-color: var(--orion-wp-login--container_background_color)
+
+    h1
+      a
+        background-image: var(--orion-wp-login--custom_logo)
+        width: var(--orion-wp-login--custom_logo_width)
+        height: var(--orion-wp-login--custom_logo_height)
+        background-size: 100%
+        background-repeat: no-repeat
+
+    p#nav
+      color: var(--orion-wp-login--background_color)
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      align-content: center
+      justify-content: space-between
+      align-items: center
+      padding: 0
+
+      a
+        color: var(--orion-wp-login--link_color)
+
+    #backtoblog
+      display: var(--orion-wp-login--backtoblock_display)
+      padding: 0
+      margin-top: 1rem
+
+      a
+        color: var(--orion-wp-login--link_color)
+
+    #loginform, #registerform, #lostpasswordform, #resetpassform
+      border-color: var(--orion-wp-login--border_color)
+      border-width: var(--orion-wp-login--border_width)
+      background-color: var(--orion-wp-login--form_background_color)
+      padding: var(--orion-wp-login--form_padding)
+      border-radius: var(--orion-wp-login--form_border_radius)
+      width: var(--orion-wp-login--form_width)
+      box-sizing: border-box
+
+      input, select
+        border-radius: var(--orion-wp-login--form_field_border_radius)
+        border-color: var(--orion-wp-login--form_field_border_color)
+        border-width: var(--orion-wp-login--form_field_border)
+
+      select
+        line-height: 1.33333333
+        width: 100%
+        border-width: .0625rem
+        padding: .1875rem .3125rem
+        margin: 0 6px 16px 0
+        min-height: 40px
+        max-height: none
+
+      p
+        padding: 0.5rem
+        box-sizing: border-box
+
+      p, label
+        color: var(--orion-wp-login--text_color)
+
+        &.submit
+          #wp-submit
+            border-color: var(--orion-wp-login--submit_button_bg_color)
+            background-color: var(--orion-wp-login--submit_button_bg_color)
+            color: var(--orion-wp-login--submit_button_text_color)
+          .button
+            border-color: var(--orion-wp-login--default_button_background_color)
+            background-color: var(--orion-wp-login--default_button_background_color)
+            color: var(--orion-wp-login--default_button_text_color)
+            border-radius: var(--orion-wp-login--form_field_border_radius)
+
+      .registration-custom-field-required-mark
+        color: var(--orion-wp-login--notice_error)
+
+    #resetpassform
+      #pass-strength-result
+        &.bad, &.short
+          border-color: var(--orion-wp-login--notice_error)
+        &.good
+          border-color: var(--orion-wp-login--notice_warning)
+        &.strong
+          border-color: var(--orion-wp-login--notice_success)
+    #registerform
+      .registration_field_container
+        display: flex
+        flex-wrap: wrap
+        box-sizing: border-box
+
+        .registration-custom-field-25
+          width: 25%
+        .registration-custom-field-33
+          width: 33%
+        .registration-custom-field-50
+          width: 50%
+        .registration-custom-field-66
+          width: 66%
+        .registration-custom-field-75
+          width: 75%
+        .registration-custom-field-100
+          width: 100%
+
+  .notice
+    position: var(--orion-wp-login--message_position)
+    top: var(--orion-wp-login--message_top)
+    bottom: var(--orion-wp-login--message_bottom)
+    left: var(--orion-wp-login--message_left)
+    right: var(--orion-wp-login--message_right)
+    max-width: var(--orion-wp-login--message_max_width)
+    width: var(--orion-wp-login--form_width)
+    box-sizing: border-box
+
+    &.notice-success
+      border-left-color: var(--orion-wp-login--notice_success)
+
+    &.notice-error
+      border-left-color: var(--orion-wp-login--notice_error)
+
+    &.notice-warning
+      border-left-color: var(--orion-wp-login--notice_warning)
+
+    &.notice-info
+      border-left-color: var(--orion-wp-login--notice_warning)

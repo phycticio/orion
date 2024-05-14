@@ -1,0 +1,290 @@
+{
+    "key": "group_664289376d424",
+    "title": "Registration fields",
+    "fields": [
+        {
+            "key": "field_66428a19cd892",
+            "label": "Hide username field",
+            "name": "registration_field_hide_username_field",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_66428d737b9a8",
+            "label": "Registration custom fields",
+            "name": "registration_custom_fields",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add custom Field",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_66429cdbfbc3a",
+                    "label": "Type",
+                    "name": "registration_custom_field_type",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "text": "Text",
+                        "select": "Select",
+                        "email": "Email",
+                        "checkbox": "Checkbox",
+                        "radio": "Radio"
+                    },
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_66428d737b9a8"
+                },
+                {
+                    "key": "field_66428bfbdff6b",
+                    "label": "Field name",
+                    "name": "registration_custom_field_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_66428d737b9a8"
+                },
+                {
+                    "key": "field_66428c0bdff6c",
+                    "label": "Field size",
+                    "name": "registration_custom_field_size",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "25%": "25%",
+                        "33%": "33%",
+                        "50%": "50%",
+                        "66%": "66%",
+                        "75%": "75%",
+                        "100%": "100%"
+                    },
+                    "default_value": "100%",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_66428d737b9a8"
+                },
+                {
+                    "key": "field_66429d26fbc3b",
+                    "label": "Options",
+                    "name": "registration_custom_field_select_options",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_66429cdbfbc3a",
+                                "operator": "==",
+                                "value": "select"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "row",
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Add Option",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_66429d89fbc3c",
+                            "label": "Option",
+                            "name": "option",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_66429d26fbc3b"
+                        }
+                    ],
+                    "parent_repeater": "field_66428d737b9a8"
+                },
+                {
+                    "key": "field_66439b26dfc1f",
+                    "label": "Value",
+                    "name": "registration_custom_field_value",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_66429cdbfbc3a",
+                                "operator": "==",
+                                "value": "checkbox"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_66429cdbfbc3a",
+                                "operator": "==",
+                                "value": "radio"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_66428d737b9a8"
+                },
+                {
+                    "key": "field_6642a4acc659a",
+                    "label": "Required",
+                    "name": "registration_custom_field_required",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1,
+                    "parent_repeater": "field_66428d737b9a8"
+                },
+                {
+                    "key": "field_6643a24697b57",
+                    "label": "Required validation text",
+                    "name": "registration_custom_field_required_validation_text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6642a4acc659a",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "The %s field is required",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_66428d737b9a8"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "registration-fields"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1715717922
+}
