@@ -81,11 +81,11 @@ class Orion_Save_Theme_Options {
 	}
 
 	private static function _save_pages(): void {
+		self::_delete_session_pages();
 		if ( ! get_field( 'custom_login_url', self::POST_ID ) ) {
 			return;
 		}
 
-		self::_delete_session_pages();
 		self::_create_session_pages();
 	}
 
