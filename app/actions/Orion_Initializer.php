@@ -22,7 +22,8 @@ class Orion_Initializer {
 		add_action( 'init', self::init( ... ) );
 		add_action( 'plugins_loaded', self::plugins_loaded( ... ) );
 
-        extract(get_fields('options'));
+		$options = get_fields('options') ?? [];
+        extract($options);
         if (isset($authenticated_users_only) && !!$authenticated_users_only === true)
             Orion_Force_Login::start();
 
