@@ -9,7 +9,7 @@ class Common {
 
 	public static function get_logo_url(): ?string {
 		if ( get_field( 'use_custom_logo', 'option' ) ) {
-			if ( get_field( 'logo_from_theme_settings', 'option' ) ) {
+			if ( ! ! get_field( 'logo_from_theme_settings', 'option' ) ) {
 				$custom_logo_id  = get_theme_mod( 'custom_logo' );
 				$logo            = wp_get_attachment_image_src( $custom_logo_id, 'full' );
 				$logo_url        = $logo[0] ?? false;
@@ -45,7 +45,7 @@ class Common {
 
 	public static function parse_style_attrs( array $styles ): string {
 		return 'style="' . join( ';', array_map( function ( $key ) use ( $styles ) {
-			return "{$key}:{$styles[$key]}";
-		}, array_keys( $styles ) ) ) . '"';
+				return "{$key}:{$styles[$key]}";
+			}, array_keys( $styles ) ) ) . '"';
 	}
 }
