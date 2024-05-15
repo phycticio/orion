@@ -29,7 +29,7 @@ class Orion_Initializer {
             Orion_Force_Login::start();
 
 		Orion_Dashboard::start();
-        Orion_Login::start($customize_login_page ?? false, $custom_login_url ?? false);
+        Orion_Login::start();
         Orion_Login_Filter::start();
 		Orion_Register::start();
 		Orion_Register_Action::start();
