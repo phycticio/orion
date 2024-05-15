@@ -6,7 +6,7 @@ use orion\helpers\Common;
 
 class Orion_Save_Theme_Options {
 	const POST_ID = 'option';
-	const PAGE_NAME = 'login-settings';
+	const PAGE_NAME = 'orion-login-settings';
 
 	public static function start(): void {
 		add_action( 'acf/options_page/save', self::acf_options_page_save( ... ) );

@@ -1,23 +1,105 @@
 {
-    "key": "ui_options_page_664267749a667",
-    "title": "Login settings",
-    "active": false,
-    "menu_order": 0,
-    "page_title": "Login settings",
-    "menu_slug": "login-settings",
-    "parent_slug": "orion",
-    "advanced_configuration": 1,
-    "icon_url": "",
-    "menu_title": "Login settings",
-    "position": 1,
-    "redirect": false,
+    "key": "group_66425dcf138ca",
+    "title": "Login Settings",
+    "fields": [
+        {
+            "key": "field_663b350568f02",
+            "label": "Customize login page",
+            "name": "customize_login_page",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_663b82445334b",
+            "label": "Custom login URL",
+            "name": "custom_login_url",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_663b719832286",
+            "label": "Customize labels",
+            "name": "customize_labels",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_663a36573882b",
+            "label": "Authenticated Users Only",
+            "name": "authenticated_users_only",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "login-settings"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
     "description": "",
-    "update_button": "Update",
-    "updated_message": "Options Updated",
-    "capability": "edit_posts",
-    "data_storage": "options",
-    "post_id": "",
-    "autoload": 0,
-    "_parent": 880,
-    "modified": 1715720839
+    "show_in_rest": 0,
+    "modified": 1715771776
 }
