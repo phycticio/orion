@@ -1326,7 +1326,7 @@ class Orion_Login_Settings {
 					'append'            => '',
 				),
 				array(
-					'key'               => 'field_663d41820f13f',
+					'key'               => 'field_663d41820f13e',
 					'label'             => esc_html__( 'Show privacy policy link', 'orion' ),
 					'name'              => 'show_privacy_policy_page_link',
 					'aria-label'        => '',
