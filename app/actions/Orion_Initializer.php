@@ -34,7 +34,7 @@ class Orion_Initializer {
 		Orion_Lost_Password::start();
 		Orion_Cron::start();
 
-        if(WP_ENVIRONMENT_TYPE === 'local') {
+        if(WP_ENVIRONMENT_TYPE === 'production') {
 	        Orion_Settings_Main_Page::start();
 	        Orion_Login_Settings::start();
 			Orion_Registration_Fields::start();
