@@ -80,6 +80,8 @@ class Orion_Save_Theme_Options {
 
 		$styles['--orion-wp-login--backtoblock_display'] = get_field( 'show_back_to_blog', 'option' ) === 1 ?
 			'block' : 'none';
+		$styles['--orion-wp-login--show_privacy_policy_page_link'] = get_field( 'show_privacy_policy_page_link', 'option' ) === 1 ?
+			'block' : 'none';
 
 		return $styles;
 	}
