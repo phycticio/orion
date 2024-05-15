@@ -23,11 +23,11 @@ class Orion_Initializer {
 		add_action( 'plugins_loaded', self::plugins_loaded( ... ) );
 
         extract(get_fields('options'));
-        if (!!$authenticated_users_only === true)
+        if (isset($authenticated_users_only) && !!$authenticated_users_only === true)
             Orion_Force_Login::start();
 
 		Orion_Dashboard::start();
-        Orion_Login::start($customize_login_page, $custom_login_url);
+        Orion_Login::start($customize_login_page ?? false, $custom_login_url ?? false);
         Orion_Login_Filter::start();
 		Orion_Register::start();
 		Orion_Register_Action::start();
