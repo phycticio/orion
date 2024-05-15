@@ -1301,8 +1301,8 @@ class Orion_Login_Settings {
 					),
 					'message'           => '',
 					'default_value'     => 1,
-					'ui_on_text'        => 'Block',
-					'ui_off_text'       => 'None',
+					'ui_on_text'        => esc_html__( 'Yes', 'orion' ),
+					'ui_off_text'       => esc_html__( 'No', 'orion' ),
 					'ui'                => 1,
 				),
 				array(
