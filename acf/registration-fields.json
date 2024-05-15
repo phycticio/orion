@@ -273,7 +273,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "registration-fields"
+                "value": "orion-registration-fields"
             }
         ]
     ],
@@ -286,5 +286,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1715771776
+    "modified": 1715772788
 }

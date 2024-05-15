@@ -14,7 +14,7 @@ class Orion_Login
 		}
 
 		if($custom_login_url) {
-			add_action('template_include', self::template_include(...), 99);
+			add_action('template_include', self::template_include(...), 1);
 			add_action('login_url', self::login_url(...));
 			add_action('register_url', self::register_url(...));
 			add_action('lostpassword_url', self::lostpassword_url(...));

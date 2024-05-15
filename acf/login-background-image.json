@@ -33,7 +33,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "login-settings"
+                "value": "orion-login-settings"
             }
         ]
     ],
@@ -46,5 +46,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1715771776
+    "modified": 1715772837
 }
