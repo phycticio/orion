@@ -76,6 +76,8 @@ class Orion_Save_Theme_Options {
 		} else {
 			$styles["--orion-wp-login--login_container_height"] = $logo_height . get_field( 'logo_height_unit', 'option' );
 		}
+		
+		$styles['--orion-wp-login--backtoblock_display'] = get_field('show_back_to_blog', 'option') ? 'block' : 'none';
 
 		return $styles;
 	}
