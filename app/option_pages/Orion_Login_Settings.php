@@ -1,4 +1,5 @@
 <?php
+
 namespace orion\option_pages;
 
 // @package orion
@@ -66,11 +67,11 @@ class Orion_Login_Settings {
 			'menu_title'  => esc_html__( 'Login settings', 'orion' ),
 			'position'    => 1,
 			'redirect'    => false,
-			'capability' => 'manage_options',
+			'capability'  => 'manage_options',
 		) );
 	}
 
-	public static function acf_include_fields() : void {
+	public static function acf_include_fields(): void {
 		acf_add_local_field_group( array(
 			'key'                   => 'group_66425dcf138ca',
 			'title'                 => 'Login Settings',
@@ -95,26 +96,27 @@ class Orion_Login_Settings {
 					'ui_off_text'       => '',
 					'ui'                => 1,
 				),
-				array(
-					'key'               => 'field_663b82445334b',
-					'label'             => esc_html__( 'Custom Login URL', 'orion' ),
-					'name'              => 'custom_login_url',
-					'aria-label'        => '',
-					'type'              => 'true_false',
-					'instructions'      => '',
-					'required'          => 0,
-					'conditional_logic' => 0,
-					'wrapper'           => array(
-						'width' => '25',
-						'class' => '',
-						'id'    => '',
-					),
-					'message'           => '',
-					'default_value'     => 0,
-					'ui_on_text'        => '',
-					'ui_off_text'       => '',
-					'ui'                => 1,
-				),
+//              @todo make this work correctly
+//				array(
+//					'key'               => 'field_663b82445334b',
+//					'label'             => esc_html__( 'Custom Login URL', 'orion' ),
+//					'name'              => 'custom_login_url',
+//					'aria-label'        => '',
+//					'type'              => 'true_false',
+//					'instructions'      => '',
+//					'required'          => 0,
+//					'conditional_logic' => 0,
+//					'wrapper'           => array(
+//						'width' => '25',
+//						'class' => '',
+//						'id'    => '',
+//					),
+//					'message'           => '',
+//					'default_value'     => 0,
+//					'ui_on_text'        => '',
+//					'ui_off_text'       => '',
+//					'ui'                => 1,
+//				),
 				array(
 					'key'               => 'field_663b719832286',
 					'label'             => esc_html__( 'Customize labels', 'orion' ),
@@ -1299,8 +1301,8 @@ class Orion_Login_Settings {
 					),
 					'message'           => '',
 					'default_value'     => 1,
-					'ui_on_text'        => '',
-					'ui_off_text'       => '',
+					'ui_on_text'        => 'Block',
+					'ui_off_text'       => 'None',
 					'ui'                => 1,
 				),
 				array(
@@ -1484,7 +1486,7 @@ class Orion_Login_Settings {
 			'label_placement'       => 'top',
 			'instruction_placement' => 'label',
 			'hide_on_screen'        => '',
-			'active'                => true,
+			'active'                => false,
 			'description'           => '',
 			'show_in_rest'          => 0,
 		) );
