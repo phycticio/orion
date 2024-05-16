@@ -10,7 +10,7 @@ class Orion_Login {
 		add_filter( 'login_form_defaults', self::login_form_defaults( ... ) );
 		add_filter( 'acf/prepare_field/name=font-family', self::acf_prepare_field_font_family( ... ) );
 		add_filter( 'login_errors', self::login_errors( ... ) );
-		add_filter( 'gettext', self::gettext( ... ), 10, 3 );
+//		add_filter( 'gettext', self::gettext( ... ), 10, 3 );
 	}
 
 	public static function login_title(): string {
