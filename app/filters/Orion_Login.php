@@ -10,6 +10,7 @@ class Orion_Login {
 		add_filter( 'login_form_defaults', self::login_form_defaults( ... ) );
 		add_filter( 'acf/prepare_field/name=font-family', self::acf_prepare_field_font_family( ... ) );
 		add_filter( 'login_errors', self::login_errors( ... ) );
+		add_filter( 'gettext', self::gettext( ... ), 10, 3 );
 	}
 
 	public static function login_title(): string {
@@ -78,9 +79,62 @@ class Orion_Login {
 
 		global $errors;
 		$error_codes = $errors->get_error_codes();
-		if(in_array('invalid_username', $error_codes) || in_array('incorrect_password', $error_codes)){
-			return '<strong style="font-weight: bold;">' . __('Error', 'orion') . '</strong>: ' . get_field( 'generic_error_message', 'option' );
+		if ( in_array( 'invalid_username', $error_codes ) || in_array( 'incorrect_password', $error_codes ) ) {
+			return '<strong style="font-weight: bold;">' . __( 'Error', 'orion' ) . '</strong>: ' . get_field( 'generic_error_message', 'option' );
 		}
+
 		return $error;
+	}
+
+	public static function gettext( string $translation, string $text, string $domain ) {
+		if ( ! get_field( 'customize_labels', 'option' ) && ! is_login() ) {
+			return $translation;
+		}
+
+		$switcher = _wp_to_kebab_case( $text );
+		switch ( $switcher ) {
+			case 'username-or-email-address':
+				$translation = ! empty( get_field( 'label_username', 'option' ) ) ?
+					get_field( 'label_username', 'option' ) : $translation;
+				break;
+			case 'password':
+				$translation = ! empty( get_field( 'label_password', 'option' ) ) ?
+					get_field( 'label_password', 'option' ) : $translation;
+				break;
+			case 'remember-me':
+				$translation = ! empty( get_field( 'label_remember', 'option' ) ) ?
+					get_field( 'label_remember', 'option' ) : $translation;
+				break;
+			case 'log-in':
+				$translation = ! empty( get_field( 'label_login_link', 'option' ) ) ?
+					get_field( 'label_login_link', 'option' ) : $translation;
+				break;
+			case 'register':
+				$translation = ! empty( get_field( 'label_register_link', 'option' ) ) ?
+					get_field( 'label_register_link', 'option' ) : $translation;
+				break;
+			case 'lost-your-password':
+				$translation = ! empty( get_field( 'label_forgot_password_link', 'option' ) ) ?
+					get_field( 'label_forgot_password_link', 'option' ) : $translation;
+				break;
+			case 'register-for-this-site':
+				$translation = ! empty( get_field( 'registration_message', 'option' ) ) ?
+					get_field( 'registration_message', 'option' ) : $translation;
+				break;
+			case 'registration-confirmation-will-be-emailed-to-you':
+				$translation = ! empty( get_field( 'registration_confirmation', 'option' ) ) ?
+					get_field( 'registration_confirmation', 'option' ) : $translation;
+				break;
+			case 'get-new-password':
+				$translation = ! empty( get_field( 'label_get_new_password', 'option' ) ) ?
+					get_field( 'label_get_new_password', 'option' ) : $translation;
+				break;
+			case 'please-enter-your-username-or-email-address-you-will-receive-an-email-message-with-instructions-on-how-to-reset-your-password':
+				$translation = ! empty( get_field( 'forgot_password_message', 'option' ) ) ?
+					get_field( 'forgot_password_message', 'option' ) : $translation;
+				break;
+		}
+
+		return $translation;
 	}
 }

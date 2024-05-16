@@ -5,7 +5,7 @@ module.exports = {
     ...defaults,
     entry: {
         'orion': path.resolve( process.cwd(), 'resources', 'scripts.ts' ),
-        'wp-login': path.resolve( process.cwd(), 'resources', 'wp-login.ts' )
+        'login': path.resolve( process.cwd(), 'resources', 'login.ts' )
     },
     output: {
         filename: '[name].js',

@@ -20,6 +20,8 @@ body.login {
 	--orion-wp-login--custom_logo_height: 7rem;
 	--orion-wp-login--login_container_width: 50%;
 	--orion-wp-login--login_container_height: rem;
+	--orion-wp-login--backtoblock_display: none;
+	--orion-wp-login--show_privacy_policy_page_link: none;
 	--orion-wp-login--custom_font_family: "Montserrat", sans-serif;
 	--orion-wp-login--message_position: static;
 	--orion-wp-login--notice_success: #81d742;

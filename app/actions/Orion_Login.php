@@ -24,7 +24,20 @@ class Orion_Login {
 
 	public static function login_enqueue_scripts(): void {
 		wp_enqueue_style( 'orion-wp-login-style-vars', ORION_URL . 'generated/css/login-vars.css' );
-		wp_enqueue_style( 'orion-wp-login-style', ORION_URL . 'dist/wp-login.css', [ 'orion-wp-login-style-vars' ] );
+		$login_assets = require_once( ORION_PATH . 'dist/login.asset.php' );
+		wp_enqueue_style(
+			'orion-wp-login-style',
+			ORION_URL . 'dist/login.css',
+			[ 'orion-wp-login-style-vars' ],
+			$login_assets['version']
+		);
+		wp_register_script(
+			'orion-wp-login-scripts',
+			ORION_URL . 'dist/login.js',
+			null,
+			$login_assets['version'],
+			[ 'in_footer' => true ]
+		);
 	}
 
 	public static function login_headerurl(): string {

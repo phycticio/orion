@@ -70,6 +70,7 @@ class Orion_Save_Theme_Options {
 
 		$styles["--orion-wp-login--login_container_width"] = get_field( 'container_width', 'option' ) .
 		                                                     get_field( 'container_width_unit', 'option' );
+		                                                     get_field( 'container_width_unit', 'option' );
 		$logo_height                                       = get_field( 'container_height', 'option' );
 		if ( $logo_height === 'auto' ) {
 			$styles["--orion-wp-login--login_container_height"] = $logo_height;
